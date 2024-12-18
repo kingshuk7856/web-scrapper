@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-response = requests.get("https://wikipedia.com")
-soup = BeautifulSoup(response.text, "html.parser")
+response= requests.get("https://en.wikipedia.org/wiki/MS_Dhoni")
+soup=BeautifulSoup(response.text,"html.parser")
 
-print(type(soup) )
+print(soup.title.text)
